@@ -1,0 +1,36 @@
+﻿@model DharDorkar.DAL.Tbl_Order
+
+@{
+    ViewBag.Title = "OrderDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Order Details</h2>
+
+<div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <h4>Product Names&nbsp;:&nbsp;@Html.DisplayFor(model => model.ProductNames, new { htmlAttributes = new { @class = "form-control" } })</h4>
+            <h4>Quantities &nbsp;:&nbsp;  @Html.DisplayFor(model => model.ProductQuantities, new { htmlAttributes = new { @class = "form-control" } })</h4>
+            <h4>Total Payment&nbsp;:&nbsp; @Html.DisplayFor(model => model.TotalPayment, new { htmlAttributes = new { @class = "form-control" } })</h4>
+            <h4>First Name&nbsp;:&nbsp;</h4><p> @Html.DisplayFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <h4>Last Name&nbsp;:&nbsp;</h4><p> @Html.DisplayFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <h4>Addess&nbsp;:&nbsp;</h4><p> @Html.DisplayFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <h4>Phone Number&nbsp;:&nbsp;</h4><p> @Html.DisplayFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <h4>Email Id&nbsp;:&nbsp;</h4><p> @Html.DisplayFor(model => model.EmailId, new { htmlAttributes = new { @class = "form-control" } })</p>
+       
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+
+            <div class="col-md-6">
+
+                <img src="~/ProductImg/@Html.DisplayFor(model =>model.NationalId)" style="height:400px;width:350px;" />
+
+            </div>
+        </div>
+    </div>
+
+</div>

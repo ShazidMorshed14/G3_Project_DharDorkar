@@ -1,0 +1,85 @@
+﻿@model DharDorkar.DAL.Tbl_Product
+
+@{
+    ViewBag.Title = "ProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<h2 style="padding-left:15px;" class="ProductHeading">Product Details</h2>
+
+<div >
+    <div class="col-md-6" style="background-color:blanchedalmond;">
+        <div class="form-group">
+            <h4>Product Name&nbsp;:&nbsp;@Html.DisplayFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })</h4>
+            <h4>Quantity Available&nbsp;:&nbsp;  @Html.DisplayFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })</h4>
+            <h4>Price&nbsp;:&nbsp; @Html.DisplayFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })</h4>
+            <h4>Description&nbsp;:&nbsp;</h4><p class="describeHere"> @Html.DisplayFor(model => model.Describtion, new { htmlAttributes = new { @class = "form-control" } })</p>
+            @*<div class="col-md-10">
+
+            <h4> </h4>
+
+
+        </div>*@
+        </div>
+    </div>
+    @*<div class="col-md-6">
+        <div class="form-group">
+            <h4>Quantity Available&nbsp;:&nbsp;  @Html.DisplayFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })</h4>
+            @*<div class="col-md-10">
+                :
+              
+
+            </div>*@
+        @*</div>*@
+    @*</div>*@
+    @*<div class="col-md-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               
+
+            </div>
+        </div>
+    </div>*@
+    @*<div class="col-md-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Describtion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                :
+               
+
+            </div>
+        </div>
+    </div>*@
+    <div class="col-md-6">
+        <div class="form-group" >
+            
+            <div class="col-md-6" class="productImage"  >
+                
+                <img src="~/ProductImg/@Html.DisplayFor(model =>model.ProductImage)"  class="responsiveImage"/>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="backFromDetails">
+    <a href="@Url.Action("Index","Home")"> <input type="button" name="name" value="Back" /> </a>
+
+</div>

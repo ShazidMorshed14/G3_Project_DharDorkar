@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="da304a0bc57e4048ac84b040954da442" Name="Diagram1">
+        <EntityTypeShape EntityType="dbDharDorkarModel.SiteUser" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_Cart" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_CartStatus" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_Category" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_MemberRole" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_Members" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_Roles" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_ShippingDetails" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_SlideImage" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="dbDharDorkarModel.FK__Tbl_Shipp__Membe__22AA2996" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_Product" Width="1.5" PointX="3" PointY="0.875" />
+        <AssociationConnector Association="dbDharDorkarModel.FK__Tbl_Cart__Produc__1BFD2C07" />
+        <AssociationConnector Association="dbDharDorkarModel.FK__Tbl_Produ__Categ__145C0A3F" />
+        <EntityTypeShape EntityType="dbDharDorkarModel.Tbl_Order" Width="1.5" PointX="5.375" PointY="9.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

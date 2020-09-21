@@ -1,0 +1,104 @@
+﻿body {
+    
+}
+
+.ViewDetails {
+    background-color:crimson;
+    transition:0.5s;
+}
+
+    .ViewDetails:hover {
+        background-color: red;
+    }
+
+
+.ProductAvailableShow{
+    margin-left:35px;
+}
+
+.ViewDetailsAllProduct {
+    background-color: purple;
+    transition: 0.5s;
+}
+
+    .ViewDetailsAllProduct:hover {
+        background-color: crimson;
+    }
+
+.thumbnail {
+    height: 350px;
+    border-radius:none;
+}
+
+img.img-responsive {
+    height: 160px;
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+img.img-responsive:hover {
+       transform: scale(1.2);
+
+}
+
+
+    input.ViewDetailsAllProduct {
+        padding: 10px 50px;
+    }
+
+.product-item-badge-black {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    padding: 5px 12px 6px;
+    color: white;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+    background: black;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    -o-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+@media only screen and (max-width: 780px) {
+    .caption h4,h5,p{
+        font-size:x-small;
+    }
+
+    .caption button{
+        margin-bottom:0.5em;
+    }
+
+    .ProductAvailableShow {
+        margin-left: 5px;
+    }
+
+    .thumbnail {
+        height: 250px;
+    }
+
+    img.img-responsive {
+        height: 80px;
+        width: 100%;
+    }
+
+    input.ViewDetailsAllProduct {
+        padding:10px 25px;
+        margin-left:15px;
+
+    }
+
+    .product-item .product-item-badge {
+        padding: 1px 1px;
+        top:2px;
+        left:5px;
+       
+    }
+
+    .product-item-badge-black {
+        padding: 2px 5px;
+    }
+
+}

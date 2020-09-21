@@ -1,0 +1,24 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "AfterLogin";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AfterLogin</h2>
+
+@if (Session["UserID"] != null)
+{
+
+
+<div class="afterLogin">
+    Welcome : <a href="#"> @Session["UserName"] </a><br />
+    <a href="~/Admin/Dashboard"> <input type="button" name="name" value="Admin Dashboard" /> </a>
+   
+</div>
+   
+       
+  
+
+}

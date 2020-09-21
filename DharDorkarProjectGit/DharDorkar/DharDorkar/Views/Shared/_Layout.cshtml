@@ -1,0 +1,121 @@
+﻿@using DharDorkar.Models.Home
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/MyMainLayOut.css" rel="stylesheet" />
+        <link href="~/Content/ProductDetailsStyle.css" rel="stylesheet" />
+        <link href="~/Content/IndexPageStyle.css" rel="stylesheet" />
+        <link href="~/Content/LoginPageDesign.css" rel="stylesheet" />
+        <link href="~/Content/AfterLoginStyle.css" rel="stylesheet" />
+    @**<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/MyMainLayOut.css" rel="stylesheet" />*@
+   @*@ @Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-6 col-sm-10 col-xs-9">
+                <div class="logo">
+                    <h1><a href="../Home/Index">Dhar <span>Dorkar</span></a></h1>
+                    <p>A Place to Lend</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-2 col-xs-3">
+                @*<div class="account">
+                    <ul>
+                        <li>
+                            <div class="hidden-xs">
+                                <h4><a>Call</a></h4>
+                                <p>018##-######</p>
+                            </div>
+                            <div class="visible-xs">
+
+                                <p>018##-######</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>*@
+                <ul class="nav navbar-nav navbar-right" >
+                    <li class="dropdown" >
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" id="cartSign"> <img src="https://img.icons8.com/material-rounded/24/000000/shopping-cart.png" style="width=10px" />  </a>
+                       
+                        <ul class="dropdown-menu" >
+                            @if (Session["cart"] != null)
+                            {
+                                foreach (Item item in (List<Item>)Session["cart"])
+                                {
+                                    <li>
+                                        <a href="@Url.Action("RemoveFromCart", "Home", new {productId=item.Product.ProductId })">@item.Product.ProductName (@item.Quantity) <i class="fa fa-times"></i></a>
+                                    </li>
+                                }
+                            }
+                            
+                            <li><a href="@Url.Action("Checkout","Home")">CheckOut</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="nav-menus">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a style="border-radius:initial;" href="../Home/Index">Home</a></li>
+                        <li class="active"><a style="border-radius:initial;" href="../Register/Index">Login</a></li>
+
+                        <li class="active"><a style="border-radius:initial;" href="../Home/About">Contact</a></li>
+                        
+
+
+
+
+
+                    </ul>
+                </div>
+
+            </div>
+            
+
+
+            
+            
+        </div>
+
+            @RenderBody()
+            <hr />
+            <footer>
+                <div class="row">
+                    <div class="col-md-12 copyright">
+                        <div class="col-md-6 col-sm-6 copyright-left" style="margin-top:5px">
+                            <p>&copy; @DateTime.Now.Year - Dhar Dorkar.All Rights Reserved</p>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 copyright-right">
+                            <ul class="list-unstyled list-social">
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

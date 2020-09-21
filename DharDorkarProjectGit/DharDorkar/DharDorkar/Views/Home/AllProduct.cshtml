@@ -1,0 +1,69 @@
+﻿@model DharDorkar.Models.Home.HomeIndexViewModel
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "AllProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row product-container" style="background-color:white;padding-top:15px;">
+    @foreach (var item in Model.ListOfProducts)
+    {
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px;">
+            <div class="thumbnail product-item" style="background-color:white;padding:10px;color:white;overflow:hidden;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;border-radius:20px;overflow:hidden;"
+                     src="../ProductImg/@item.ProductImage" />
+                <div class="caption" style="text-align:center;">
+                    <h4>@item.ProductName</h4>
+                    <h5 style="color:crimson;font-size:large;">@item.Price</h5>
+                    <p>
+                        @if (item.Quantity > 0)
+                        {
+                            using (Html.BeginForm("AddToCart", "Home", new { productId = item.ProductId }, FormMethod.Post))
+                            {
+                                <button type="submit" class="pull-right"><i class="fa fa-shopping-cart"></i></button>
+                            }
+                        <p class="ProductAvailableShow">Available</p>
+                        <p>
+                            <a href="@Url.Action("ProductDetails", "Home", new {productId=item.ProductId })" style="text-decoration:none;"> <input type="button" name="name" value="Details" style="color:white;border:none;border-radius:20px;transition:0.5s;" class="ViewDetailsAllProduct" />  </a>
+                        </p>
+
+                    }
+                    else
+                    {
+                        <p>Not Available</p>
+                    }
+
+                        <p></p>
+
+                        @if (item.IsFeatured == true)
+                        {
+                            <div class="product-item-badge" style="background-color:red;border-radius:5px;">
+                                <p>Hot Trends</p>
+                            </div>
+
+                        }
+                        else
+                        {
+                            <div class="product-item-badge-black" style="background-color:black;border-radius:5px;">
+                                <p>Old</p>
+                            </div>
+                        }
+                    </div>
+                   
+
+
+                </div>
+            </div>
+        }
+
+
+</div>
+
+
+
+<div class="container">
+    @Html.PagedListPager(Model.ListOfProducts, page => Url.Action("Allproduct", new { page }))
+</div>

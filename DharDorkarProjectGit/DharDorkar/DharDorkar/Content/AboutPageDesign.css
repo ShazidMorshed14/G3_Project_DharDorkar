@@ -1,0 +1,82 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+
+body {
+    
+}
+html{
+    
+}
+
+.nav a {
+    text-decoration: none;
+    color:black;
+    font-size:large;
+    font-weight:600;
+}
+
+.logoClass a {
+    text-decoration:none;
+    font-size:x-large;
+    font-weight: 300;
+    /*text-transform: uppercase;*/
+    letter-spacing: 0.1rem;
+    font-family: 'Pacifico', cursive;
+    transition:0.5s;
+    color:black;
+}
+
+
+
+.logoClass a:hover{
+    color:crimson;
+} 
+
+
+.jumbotron{
+    background:url('../Images/service.jpg');
+    background-size:cover;
+    position:relative;
+}
+.jumbotron::after{
+    content:'';
+    top:0;
+    left:0;
+    background-color:black;
+    opacity:0.7;
+    width:100%;
+    height:100%;
+    position:absolute;
+   
+}
+
+.hero{
+    z-index:2;
+}
+
+.aboutheading {
+    display:flex;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    background-color:black;
+    
+}
+
+.aboutheading h2{
+    font-weight:600;
+    font-size:larger;
+    color:white;
+    padding:2px 0;
+}
+
+nav a{
+    transition:0.5s;
+}
+
+nav a:hover{
+    color:crimson;
+}
+
+
+@media only screen and (max-width: 768px) {
+}

@@ -1,0 +1,61 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+    
+}
+
+.ProductHeading {
+    background-color: bisque;
+    font-weight:600;
+}
+
+.backFromDetails a{
+    text-decoration:none;
+
+}
+
+.backFromDetails input{
+    background-color:black;
+    border:2px solid black;
+    padding:10px 40px;
+    color:white;
+    font-weight:600;
+    border-radius:20px;
+    transition:0.5s;
+    margin-left:15px;
+
+}
+
+.backFromDetails input:hover{
+    background-color:white;
+    color:black;
+}
+
+.form-group h4{
+    font-weight:600;
+}
+
+img.responsiveImage {
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.describeHere{
+    font-weight:500;
+}
+
+
+@media only screen and (max-width: 780px) {
+    .form-group h4 {
+        font-weight: 400;
+        font-size:small;
+    }
+
+    img.responsiveImage{
+        width:200px;
+        height:200px;
+    }
+}
